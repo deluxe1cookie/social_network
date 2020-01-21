@@ -1,0 +1,14 @@
+.profilePic {
+    height: 50px;
+    width: 50px;
+    padding-right: 25px;
+}
+
+.newPostBtn {
+    padding-top: 10px;
+}
+
+.newPost div {
+    display: flex;
+    justify-content: flex-end;
+}

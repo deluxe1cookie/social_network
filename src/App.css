@@ -6,7 +6,7 @@
     display: inline;
     margin: 0;
     padding: 0;
-    color: -webkit-link;
+    color: #285473;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
     -webkit-font-smoothing: antialiased;
     font-size: 16px;
@@ -22,21 +22,14 @@
     grid-gap: 10px;
 }
 
-.header {
-    grid-area: h;
-    background-color: springgreen;
-}
-
-.nav {
-    grid-area: n;
-    background-color: plum;
-}
-
-.content {
+.app-wrapper-content {
     grid-area: c;
     background-color: azure;
 }
 
-.header img {
-    width: 50px;
-}
+
+
+
+
+
+
