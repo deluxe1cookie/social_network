@@ -1,20 +1,23 @@
 import React from 'react';
 import Profile from "./Profile";
 import {connect} from "react-redux";
-import {getUserProfile} from "../../redux/profile-reducer";
-import {Redirect, withRouter} from "react-router-dom";
+import {getStatus, getUserProfile, updateStatus} from "../../redux/profile-reducer";
+import {withRouter} from "react-router-dom";
 import {toggleIsFetching} from "../../redux/common-reducer";
-import {getAuthUserData} from "../../redux/auth-reducer";
+import {withAuthRedirect} from "../../hoc/withAuthRedirect";
+import {compose} from "redux";
 
 class ProfileContainer extends React.Component {
     componentDidMount() {
         let userId = this.props.match.params.userId;
         if (!userId) {
-            userId = 5484;
+            userId = this.props.userId;
         }
         this.props.getUserProfile(userId);
-        //this.props.getAuthUserData();
+        this.props.getStatus(userId);
+
         /*
+        this.props.getAuthUserData();
                 let data = {
                     "aboutMe": "был, есть и буду",
                     "contacts": {
@@ -42,26 +45,21 @@ class ProfileContainer extends React.Component {
     }
 
     render() {
-        if (!this.props.isAuth) {
-            return <Redirect to={'/login'}/>
-        }
-
         return (
             <Profile {...this.props}/>
         )
     }
 }
 
-let mapStateToProps = (state) => {
-    return {
-        isFetching: state.usersPage.isFetching,
-        profileData: state.profilePage.profileData,
-        isAuth: state.auth.isAuth
-    }
-};
+let mapStateToProps = (state) => ({
+    isFetching: state.usersPage.isFetching,
+    profileData: state.profilePage.profileData,
+    status: state.profilePage.status,
+    userId: state.auth.userId
+});
 
-let withUrlDataContainer = withRouter(ProfileContainer);
-
-export default connect(mapStateToProps, {
-    toggleIsFetching, getUserProfile, getAuthUserData
-})(withUrlDataContainer);
+export default compose(
+    connect(mapStateToProps, {toggleIsFetching, getUserProfile, getStatus, updateStatus}),
+    withRouter,
+    withAuthRedirect
+)(ProfileContainer);

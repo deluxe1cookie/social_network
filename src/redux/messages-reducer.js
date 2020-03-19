@@ -1,5 +1,4 @@
-const UPDATE_NEW_MESSAGE_BODY = 'UPDATE_NEW_MESSAGE_BODY';
-const SEND_MESSAGE = 'SEND-MESSAGE';
+const SEND_MESSAGE = 'social_network/messages/SEND-MESSAGE';
 
 let initialState = {
     dialogs: [
@@ -17,18 +16,13 @@ let initialState = {
         {id: 4, text: 'I\'m fine thanks. What about you?', yours: false},
         {id: 5, text: 'BAD :(', yours: true},
         {id: 6, text: 'Why so?', yours: false}
-    ],
-    newMessageBody: ''
+    ]
 };
 
-export const dialogsReducer = (state = initialState, action) => {
+export const messagesReducer = (state = initialState, action) => {
     switch (action.type) {
-        case UPDATE_NEW_MESSAGE_BODY:
-            state.newMessageBody = action.body;
-            return Object.assign({}, state);
         case SEND_MESSAGE:
-            let body = state.newMessageBody;
-            state.newMessageBody = '';
+            let body = action.newMessageBody;
             state.messages.push({id: 6, text: body, yours: true});
             return Object.assign({}, state);
         default:
@@ -36,11 +30,6 @@ export const dialogsReducer = (state = initialState, action) => {
     }
 };
 
-export const sendMessageCreator = () => ({
-    type: SEND_MESSAGE
-});
-export const updateNewMessageBodyCreator = (body) => ({
-    type: UPDATE_NEW_MESSAGE_BODY, body: body
-});
+export const sendMessage = (newMessageBody) => ({type: SEND_MESSAGE, newMessageBody});
 
-export default dialogsReducer;
+export default messagesReducer;

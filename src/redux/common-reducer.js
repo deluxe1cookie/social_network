@@ -1,13 +1,13 @@
-const TOGGLE_IS_FETCHING = 'TOGGLE_IS_FETCHING';
+const TOGGLE_IS_FETCHING = 'social_network/common/TOGGLE_IS_FETCHING';
 
 let initialState = {
     isFetching: false
 };
 
-export const commonReducer = (state = initialState, action) => {
+const commonReducer = (state = initialState, action) => {
     switch (action.type) {
         case TOGGLE_IS_FETCHING: {
-            return {...state, isFetching: action.isFetching}
+            return {...state, isFetching: action.isFetching};
         }
         default:
             return state;

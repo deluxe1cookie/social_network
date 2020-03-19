@@ -1,14 +1,32 @@
 .header {
-    width: 1000px;
-    height: 200px;
+  width: 1000px;
+  height: 200px;
 }
 
 .profileInfo {
-    display: flex;
-    margin: 20px 0;
+  display: flex;
 }
 
-.contacts > a > img {
-    height: 50px;
-    margin: 0 10px;
+.profileInfo > img {
+  width: 320px;
+  background-color: #aba8ff;
+  border-radius: 10px;
+  margin-right: 25px;
 }
+
+.profileInfo > div > h1 {
+  margin: 0;
+}
+
+.contacts {
+  margin-top: 20px;
+  display: flex;
+}
+
+.contacts > a > div {
+  height: 50px;
+  width: 50px;
+  margin: 0 10px;
+  background-size: contain;
+}
+
