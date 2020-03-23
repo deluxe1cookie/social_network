@@ -1,11 +1,7 @@
-.post {
-    border: 1px solid #fa7ad6;
-}
-
 .postLogo {
-    width: 50px;
+  width: 50px;
 }
 
 .postText {
-    padding: 10px 0;
+  padding: 10px 0;
 }

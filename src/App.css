@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 .link-button {
   background-color: transparent;
   border: none;
@@ -28,6 +30,17 @@
   padding: 20px;
 }
 
+.preloader {
+  position: absolute;
+  width: 280px;
+  height: 180px;
+  left: 50%;
+  top: 50%;
+  margin-left: -150px;
+  margin-top: -100px;
+  padding: 10px;
+  overflow: auto;
+}
 
 
 

@@ -7,14 +7,19 @@
   display: flex;
 }
 
-.profileInfo > img {
+.profileInfo > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.profilePhoto {
   width: 320px;
   background-color: #aba8ff;
   border-radius: 10px;
   margin-right: 25px;
 }
 
-.profileInfo > div > h1 {
+.fullName {
   margin: 0;
 }
 

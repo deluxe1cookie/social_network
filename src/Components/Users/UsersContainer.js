@@ -23,6 +23,10 @@ class UsersContainer extends React.Component {
 
 
     render() {
+        if (this.props.users.length === 0) {
+            return <Preloader/>;
+        }
+
         return <>
             {this.props.isFetching ? <Preloader/> : null}
 

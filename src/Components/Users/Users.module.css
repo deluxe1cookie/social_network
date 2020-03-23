@@ -1,21 +1,84 @@
-.photo {
-    height: 200px;
-    width: 200px;
+.users {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
+.users > h1 {
+  margin: 0 0 30px 0;
+  color: #2a5885;
+}
+
+.user {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.paginator {
+  align-self: center;
+}
+
+.photo {
+  height: 200px;
+  width: 200px;
+}
 
 a.page {
-    color: black;
-    text-decoration: none;
+  color: black;
+  text-decoration: none;
 }
 
 a.page:hover {
-    color: #5286bb;
-    text-decoration: none;
-    cursor: pointer;
+  color: #5286bb;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 a.selectedPage {
-    font-weight: bold;
-    color: #5286bb;
+  font-weight: bold;
+  color: #2a5885;
+}
+
+
+.user > div > a {
+  color: #2a5885;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: Roboto, sans-serif;
+}
+
+.user > div > a:hover {
+  text-decoration: underline;
+}
+
+.button {
+  align-self: center;
+  width: 135px;
+  line-height: 11px;
+  display: block;
+  padding: 7px 3px 8px 3px;
+  margin: 0;
+  font-size: 12.5px;
+  zoom: 1;
+  cursor: pointer;
+  white-space: nowrap;
+  outline: none;
+  font-family: -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, Geneva, "Noto Sans Armenian", "Noto Sans Bengali", "Noto Sans Cherokee", "Noto Sans Devanagari", "Noto Sans Ethiopic", "Noto Sans Georgian", "Noto Sans Hebrew", "Noto Sans Kannada", "Noto Sans Khmer", "Noto Sans Lao", "Noto Sans Osmanya", "Noto Sans Tamil", "Noto Sans Telugu", "Noto Sans Thai", sans-serif, arial, Tahoma, verdana;
+  font-weight: 400;
+  vertical-align: top;
+  text-align: center;
+  text-decoration: none;
+  background: none;
+  background-color: #5181b8;
+  color: #fff;
+  border: 0;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.unsubscribe {
+  background-color: #e5ebf1;
+  color: #55677d;
 }
