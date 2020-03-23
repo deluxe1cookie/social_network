@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[8],{296:function(e,n,s){e.exports={feed:"Feed_feed__1sxMI"}},297:function(e,n,s){"use strict";s.r(n);var a=s(0),t=s.n(a),c=s(296),d=s.n(c);n.default=function(e){return t.a.createElement("div",{className:d.a.messages},"Feed")}}}]);
+//# sourceMappingURL=8.2d27a2d9.chunk.js.map
